@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Trebuchet MS", sans-serif;
+    line-height: 1.6;
+}
+
+/* HEADER STYLE */
+#main-header {
+    background-color: #333;
+    color: white;
+    padding: 15px 50px;
+    overflow: hidden;
+}
+
+#main-header h1 {
+    float: left;
+}
+
+#main-header span {
+    color: #3498db;
+}
+
+#main-header ul {
+    float: right;
+    list-style: none;
+    margin-top: 10px;
+}
+
+#main-header li {
+    display: inline;
+    margin-left: 20px;
+}
+
+#main-header a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s;
+}
+
+#main-header a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #3498db;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s;
+}
+
+#main-header a:hover::after {
+    width: 100%;
+}
+
+/* HERO SECTION */
+#hero {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 80px 20px;
+    border-bottom: 5px solid #3498db;
+}
+
+#hero h2, #hero p {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+#hero h2 {
+    animation-delay: 0.5s;
+}
+
+#hero p {
+    animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.blue-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.blue-btn:hover {
+    transform: scale(1.1);
+    background-color: #2980b9;
+}
+
+/* THE CONTAINER & CARDS */
+.container {
+    width: 90%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.course-card {
+    display: inline-block;
+    width: 28%;
+    margin: 1%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    vertical-align: top;
+    background-color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    border-color: #3498db;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.card-image {
+    height: 100px;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    transition: transform 0.3s;
+}
+
+.course-card:hover .card-image {
+    transform: scale(1.05);
+}
